@@ -1,0 +1,48 @@
+<section>
+    <h2>ZSI Med</h2>
+    <h3>System wspomagania rozpoznawania cukrzycy</h3>
+    
+    <form (ngSubmit)="submitForm()" #myForm="ngForm">
+        <div>
+          <label for="pregnancies">Pregnancies:</label>
+          <input type="number" id="pregnancies" name="pregnancies" [(ngModel)]="formData.pregnancies" required>
+        </div>
+        
+        <div>
+          <label for="plasmaGlucose">Plasma Glucose:</label>
+          <input type="number" id="plasmaGlucose" name="plasmaGlucose" [(ngModel)]="formData.plasmaGlucose" required>
+        </div>
+        
+        <div>
+          <label for="diastolicBloodPressure">Diastolic Blood Pressure:</label>
+          <input type="number" id="diastolicBloodPressure" name="diastolicBloodPressure" [(ngModel)]="formData.diastolicBloodPressure" required>
+        </div>
+        
+        <div>
+          <label for="tricepsThickness">Triceps Thickness:</label>
+          <input type="number" id="tricepsThickness" name="tricepsThickness" [(ngModel)]="formData.tricepsThickness" required>
+        </div>
+        
+        <div>
+          <label for="serumInsulin">Serum Insulin:</label>
+          <input type="number" id="serumInsulin" name="serumInsulin" [(ngModel)]="formData.serumInsulin" required>
+        </div>
+        
+        <div>
+          <label for="bmi">BMI:</label>
+          <input type="number" id="bmi" name="bmi" step="0.01" [(ngModel)]="formData.bmi" required>
+        </div>
+        
+        <div>
+          <label for="diabetesPedigree">Diabetes Pedigree:</label>
+          <input type="number" id="diabetesPedigree" name="diabetesPedigree" step="0.01" [(ngModel)]="formData.diabetesPedigree" required>
+        </div>
+        
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" [(ngModel)]="formData.age" required>
+        </div>
+        
+        <button type="submit" [disabled]="!myForm.form.valid">Submit</button>
+      </form>
+  </section>
