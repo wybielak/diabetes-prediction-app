@@ -7,53 +7,56 @@
     <div class="form-box">
         <div class="form-value">
 
+            <h2>Wprowadź wyniki z pomiarów pacjenta</h2>
             <form (ngSubmit)="submitForm()" #myForm="ngForm">
-                <h2>Wprowadź wyniki z pomiarów pacjenta</h2>
 
-                <div class="inputbox">
-                    <label for="pregnancies">Pregnancies:</label>
-                    <input type="number" id="pregnancies" name="pregnancies" [(ngModel)]="formData.pregnancies" required>
+                <div class="input-container">
+                    <div class="inputbox">
+                        <label for="pregnancies">Pregnancies: </label>
+                        <input type="number" id="pregnancies" name="pregnancies" [(ngModel)]="formData.pregnancies" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="plasmaGlucose">Plasma Glucose: </label>
+                        <input type="number" id="plasmaGlucose" name="plasmaGlucose" [(ngModel)]="formData.plasmaGlucose" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="diastolicBloodPressure">Diastolic Blood Pressure: </label>
+                        <input type="number" id="diastolicBloodPressure" name="diastolicBloodPressure" [(ngModel)]="formData.diastolicBloodPressure" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="tricepsThickness">Triceps Thickness: </label>
+                        <input type="number" id="tricepsThickness" name="tricepsThickness" [(ngModel)]="formData.tricepsThickness" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="serumInsulin">Serum Insulin: </label>
+                        <input type="number" id="serumInsulin" name="serumInsulin" [(ngModel)]="formData.serumInsulin" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="bmi">BMI: </label>
+                        <input type="number" id="bmi" name="bmi" [(ngModel)]="formData.bmi" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="diabetesPedigree">Diabetes Pedigree: </label>
+                        <input type="number" id="diabetesPedigree" name="diabetesPedigree" [(ngModel)]="formData.diabetesPedigree" required>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="age">Age: </label>
+                        <input type="number" id="age" name="age" [(ngModel)]="formData.age" required>
+                    </div>
                 </div>
-                
-                <div class="inputbox">
-                    <label for="plasmaGlucose">Plasma Glucose:</label>
-                    <input type="number" id="plasmaGlucose" name="plasmaGlucose" [(ngModel)]="formData.plasmaGlucose" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="diastolicBloodPressure">Diastolic Blood Pressure:</label>
-                    <input type="number" id="diastolicBloodPressure" name="diastolicBloodPressure" [(ngModel)]="formData.diastolicBloodPressure" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="tricepsThickness">Triceps Thickness:</label>
-                    <input type="number" id="tricepsThickness" name="tricepsThickness" [(ngModel)]="formData.tricepsThickness" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="serumInsulin">Serum Insulin:</label>
-                    <input type="number" id="serumInsulin" name="serumInsulin" [(ngModel)]="formData.serumInsulin" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="bmi">BMI:</label>
-                    <input type="number" id="bmi" name="bmi" [(ngModel)]="formData.bmi" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="diabetesPedigree">Diabetes Pedigree:</label>
-                    <input type="number" id="diabetesPedigree" name="diabetesPedigree" [(ngModel)]="formData.diabetesPedigree" required>
-                </div>
-                
-                <div class="inputbox">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" [(ngModel)]="formData.age" required>
-                </div>
+
                 
                 <button type="submit">Submit</button>
               </form>
         </div>
     </div>
-    <p>Przewidywanie {{diabetes_prediction}}</p>
-    <p>Prawdopodobieństwo {{probability | percent}}</p>
+    <span>Przewidywanie: {{diabetes_prediction}}</span>
+    <span>Prawdopodobieństwo: {{probability | percent}}</span>
   </section>
