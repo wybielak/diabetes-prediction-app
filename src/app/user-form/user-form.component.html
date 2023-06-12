@@ -8,31 +8,32 @@
         <div class="form-value">
 
             <h2>Wprowadź wyniki z pomiarów pacjenta</h2>
+            <p>Wypełnia wykfalifikowany lekarz!</p>
             <form (ngSubmit)="submitForm()" #myForm="ngForm">
 
                 <div class="input-container">
                     <div class="inputbox">
-                        <label for="pregnancies">Pregnancies: </label>
+                        <label for="pregnancies">Pregnancies (Ciąże): </label>
                         <input type="number" id="pregnancies" name="pregnancies" [(ngModel)]="formData.pregnancies" required>
                     </div>
                     
                     <div class="inputbox">
-                        <label for="plasmaGlucose">Plasma Glucose: </label>
+                        <label for="plasmaGlucose">Plasma Glucose (Poziom glukozy we krwi): </label>
                         <input type="number" id="plasmaGlucose" name="plasmaGlucose" [(ngModel)]="formData.plasmaGlucose" required>
                     </div>
                     
                     <div class="inputbox">
-                        <label for="diastolicBloodPressure">Diastolic Blood Pressure: </label>
+                        <label for="diastolicBloodPressure">Diastolic Blood Pressure (Rozkurczowe ciśnienie krwi): </label>
                         <input type="number" id="diastolicBloodPressure" name="diastolicBloodPressure" [(ngModel)]="formData.diastolicBloodPressure" required>
                     </div>
                     
                     <div class="inputbox">
-                        <label for="tricepsThickness">Triceps Thickness: </label>
+                        <label for="tricepsThickness">Triceps Thickness (Grubość tricepsa): </label>
                         <input type="number" id="tricepsThickness" name="tricepsThickness" [(ngModel)]="formData.tricepsThickness" required>
                     </div>
                     
                     <div class="inputbox">
-                        <label for="serumInsulin">Serum Insulin: </label>
+                        <label for="serumInsulin">Serum Insulin (Insulina w surowicy): </label>
                         <input type="number" id="serumInsulin" name="serumInsulin" [(ngModel)]="formData.serumInsulin" required>
                     </div>
                     
@@ -42,12 +43,12 @@
                     </div>
                     
                     <div class="inputbox">
-                        <label for="diabetesPedigree">Diabetes Pedigree: </label>
+                        <label for="diabetesPedigree">Diabetes Pedigree (Rodowód cukrzycowy): </label>
                         <input type="number" id="diabetesPedigree" name="diabetesPedigree" [(ngModel)]="formData.diabetesPedigree" required>
                     </div>
                     
                     <div class="inputbox">
-                        <label for="age">Age: </label>
+                        <label for="age">Age (Wiek): </label>
                         <input type="number" id="age" name="age" [(ngModel)]="formData.age" required>
                     </div>
                 </div>
